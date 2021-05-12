@@ -6,8 +6,8 @@ import java.util.ArrayList;
 public class dataRetriever{
     public dataRetriever(){
     }
-    public static void main(String[]args){
-    }
+    //public static void main(String[]args){
+    //}
     public String[][] getData(String fileName){
         String csvLine = "";
         String separator = ",";
