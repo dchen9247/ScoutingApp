@@ -6,10 +6,19 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Launch HelloFX",
+            "name": "Debug (Launch) - Current File",
             "request": "launch",
-            "mainClass": "HelloFX",
-            "vmArgs": "--module-path C:/Users/Matt/.vscode/javafx-sdk-11.0.2/lib --add-modules javafx.controls,javafx.fxml"
+            "mainClass": "App",
+            "projectName": "${file}"
+            //ScoutingApp_ef3e64c0
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch) - App<ScoutingApp_ef3e64c0>",
+            "request": "launch",
+            "vmArgs": "--module-path /Users/DavidC/Desktop/javafx-sdk-11.0.2/lib --add-modules javafx.controls,javafx.fxml", 
+            "mainClass": "App",
+            "projectName": "ScoutingApp_ef3e64c0"
         }
     ]
 }

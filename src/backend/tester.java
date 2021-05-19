@@ -6,7 +6,7 @@ public class tester{
         averager myAverager = new averager();
         //System.out.println(myDataRetriever.getData("ScoutingApp/Backend/GreaterDC2018Scouting.csv"));
         String[][]data = myDataRetriever.getData("dataSets/GreaterDC2018Scouting.csv");
-        myDataRetriever.printData(data);
+        myDataRetriever.printData("dataSets/GreaterDC2018Scouting.csv");
         System.out.println(myAverager.getAverageAutoSwitch(data, "1731"));
         System.out.println(myAverager.getAverageAutoScale(data, "1731"));
         System.out.println(myAverager.getAverageTeleSwitch(data, "1731"));

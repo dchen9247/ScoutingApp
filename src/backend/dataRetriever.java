@@ -6,8 +6,8 @@ import java.util.ArrayList;
 public class dataRetriever{
     public dataRetriever(){
     }
-    //public static void main(String[]args){
-    //}
+    public static void main(String[]args){
+    }
     public String[][] getData(String fileName){
         String csvLine = "";
         String separator = ",";
@@ -51,17 +51,30 @@ public class dataRetriever{
         String[][] blank2DArray = new String[0][0];
         return blank2DArray;
     }
-    public void printData(String[][]data){
-        for(int row = 0; row<data.length; row++){
-                for(int column = 0; column<data[0].length; column++){
-                    if(column<data[0].length-1){
-                        System.out.print(data[row][column]+ ", ");
+    public void printData(String fileName){
+        String[][]data2DArray = this.getData(fileName);
+        for(int row = 0; row<data2DArray.length; row++){
+                for(int column = 0; column<data2DArray[0].length; column++){
+                    if(column<data2DArray[0].length-1){
+                        System.out.print(data2DArray[row][column]+ ", ");
                     }
                     else{
-                        System.out.println(data[row][column]);
+                        System.out.println(data2DArray[row][column]);
                     }
                 }
         }
 
+    }
+    public ArrayList<String> getTeamNumbers(String fileName){
+        String[][]data2DArray= this.getData(fileName);
+        ArrayList<String> teamNumbers = new ArrayList<String>();
+        for(int row = 0; row<data2DArray.length; row++){
+            for(int column = 0; column<data2DArray[0].length; column++){
+                if(column==1 && teamNumbers.contains(data2DArray[row][column])==false){
+                    teamNumbers.add(data2DArray[row][column]);
+                }
+            }
+        }
+        return teamNumbers;
     }
 }
